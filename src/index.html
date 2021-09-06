@@ -4,8 +4,41 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="main.css">
   <title>Nitro Marketing Digital</title>
 </head>
 <body>
+  <div class="container">
+    <header>
+      <a href="#" class="logo-link">
+        <img src="./assets/logo.png" alt="Logo da Consulta Encomendas">
+      </a>
+    </header>
+    <main>
+      <h1>Consulte sua encomenda:</h1>
+      <form class="search-form">
+        <label for="search-field">
+          <input type="text" id="search-field" placeholder="Digite o número do pedido">
+          <button id="search-btn">
+            <img src="./assets/lupa.png" alt="Icone pesquisa">
+          </button>
+        </label>
+      </form>
+      <section class="data">
+        <h2 id="client-id"></h2>
+        <span>Número de ordem e nome do cliente</span>
+      </section>
+      <section class="data">
+        <h2 id="status"></h2>
+        <span>Situação da encomenda</span>
+        <span></span>
+      </section>
+      <section class="data">
+        <h2 id="date"></h2>
+        <span>Data do pedido</span>
+      </section>
+    </main>
+  </div>
+  <script src="./App.js"></script>
 </body>
 </html>

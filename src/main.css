@@ -1,0 +1,95 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+h1, h2, h3, h4, h5 {
+  font-size: inherit;
+}
+
+input {
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.container {
+  padding: 2rem;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+header {
+  margin-bottom: 4.8rem;
+}
+header a, header img {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+main {
+  text-align: center;
+}
+main h1 {
+  color: #2677C1;
+  font-size: 1.6rem;
+  font-style: italic;
+  margin-bottom: 1.6rem;
+}
+main section:not(:last-child) {
+  margin-bottom: 2.4rem;
+}
+
+.search-form {
+  margin-bottom: 4.8rem;
+}
+.search-form label {
+  border: 3px solid #97CE10;
+  border-radius: 200px;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.search-form label > * {
+  background: transparent;
+  border: none;
+}
+.search-form label input {
+  padding: 0.6rem 0 0.6rem 1.6rem;
+  font-size: 1.6rem;
+  width: calc(100% - 3rem);
+}
+.search-form label input::placeholder {
+  color: #818181;
+  font-style: italic;
+}
+.search-form label button {
+  padding: 0.4rem 1rem;
+}
+.search-form label button img {
+  margin-top: 4px;
+}
+
+.data h2 {
+  color: #2677C1;
+}
+.data span {
+  color: #018AD2;
+  font-size: 1.2rem;
+}
+
+/*# sourceMappingURL=main.css.map */
