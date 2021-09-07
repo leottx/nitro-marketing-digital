@@ -28,12 +28,22 @@ body {
 
 .container {
   padding: 2rem;
-  max-width: 480px;
+  max-width: 576px;
   margin: 0 auto;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    padding: 5.6rem 2rem;
+  }
 }
 
 header {
   margin-bottom: 4.8rem;
+}
+@media screen and (min-width: 480px) {
+  header {
+    margin-bottom: 5.6rem;
+  }
 }
 header a, header img {
   display: block;
@@ -50,12 +60,16 @@ main h1 {
   font-style: italic;
   margin-bottom: 1.6rem;
 }
-main section:not(:last-child) {
-  margin-bottom: 2.4rem;
+@media screen and (min-width: 480px) {
+  main h1 {
+    font-size: 1.8rem;
+    margin-bottom: 2.4rem;
+  }
 }
 
 .search-form {
-  margin-bottom: 4.8rem;
+  margin: 0 auto 4.8rem;
+  max-width: 480px;
 }
 .search-form label {
   border: 3px solid #97CE10;
@@ -84,12 +98,52 @@ main section:not(:last-child) {
   margin-top: 4px;
 }
 
+.wrapper {
+  position: relative;
+  font-size: 1.6rem;
+}
+@media screen and (min-width: 480px) {
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.data {
+  margin: 3.6rem 0;
+}
+@media screen and (min-width: 480px) {
+  .data {
+    width: calc(50% - 4rem);
+  }
+}
+.data > * {
+  text-align: center;
+}
 .data h2 {
   color: #2677C1;
+  font-size: 1.8rem;
+  font-weight: normal;
+  margin-bottom: 1.2rem;
 }
-.data span {
+.data p {
   color: #018AD2;
   font-size: 1.2rem;
+  font-style: oblique;
+}
+
+.error {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  color: #FF0000;
+}
+.error p {
+  line-height: 1.6;
 }
 
 /*# sourceMappingURL=main.css.map */

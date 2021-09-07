@@ -31,13 +31,19 @@ body {
 }
 
 .container {
-  padding: 2rem;
-  max-width: 480px;
+  padding: variables.$p-md;
+  max-width: 576px;
   margin: 0 auto;
+  @media screen and (min-width: 480px) {
+    padding: variables.$p-2xl 2rem;
+  }
 }
 
 header {
   margin-bottom: variables.$m-xxl;
+  @media screen and (min-width: 480px) {
+    margin-bottom: variables.$m-2xl;
+  }
   a, img {
     display: block;
     max-width: 100%;
@@ -52,14 +58,16 @@ main {
     font-size: variables.$f-sm;
     font-style: italic;
     margin-bottom: variables.$m-sm;
-  }
-  section:not(:last-child) {
-    margin-bottom: variables.$m-lg;
+    @media screen and (min-width: 480px) {
+      font-size: variables.$f-md;
+      margin-bottom: variables.$m-lg;
+    }
   }
 }
 
 .search-form {
-  margin-bottom: variables.$m-xxl;
+  margin:0 auto variables.$m-xxl;
+  max-width: 480px;
   label {
     border: 3px solid variables.$primary-color;
     border-radius: 200px;
@@ -90,12 +98,46 @@ main {
   }
 }
 
+.wrapper {
+  position: relative;
+  font-size: variables.$f-sm;
+  @media screen and (min-width: 480px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
 .data {
+  margin: variables.$m-xl 0;
+  @media screen and (min-width: 480px) {
+    width: Calc(50% - 4rem);
+  }
+  > * {
+    text-align: center;
+  }
   h2 {
     color: variables.$secondary-color;
+    font-size: variables.$f-md;
+    font-weight: normal;
+    margin-bottom: variables.$m-xs;
   }
-  span {
+  p {
     color: variables.$ternary-color;
     font-size: variables.$f-xxs;
+    font-style: oblique;
+  }
+}
+
+.error {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  color: variables.$error-color;
+  p {
+    line-height: 1.6;
   }
 }

@@ -24,21 +24,30 @@
           </button>
         </label>
       </form>
-      <section class="data">
-        <h2 id="client-id"></h2>
-        <span>Número de ordem e nome do cliente</span>
-      </section>
-      <section class="data">
-        <h2 id="status"></h2>
-        <span>Situação da encomenda</span>
-        <span></span>
-      </section>
-      <section class="data">
-        <h2 id="date"></h2>
-        <span>Data do pedido</span>
-      </section>
+      <div class="wrapper">
+        <section id="client-id" class="data" hidden="true">
+          <h2></h2>
+          <p></p>
+        </section>
+        <section id="price" class="data" hidden="true">
+          <h2></h2>
+          <p></p>
+        </section>
+        <section id="date"class="data" hidden="true">
+          <h2></h2>
+          <p></p>
+        </section>
+        <section class="error" hidden="true">
+          <p>Encomenda <br> não encontrada!</p>
+          <p>Procure novamente</p>
+        </section>
+        <section id="status" class="data" hidden="true">
+          <h2></h2>
+          <p></p>
+        </section>
+      </div>
     </main>
   </div>
-  <script src="./App.js"></script>
+  <script src="./app.js"></script>
 </body>
 </html>
