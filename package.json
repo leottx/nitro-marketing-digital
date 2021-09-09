@@ -4,7 +4,8 @@
   "description": "Desafio para vaga de desenvolvedor front-end na Nitro Marketing Digital",
   "main": "index.js",
   "scripts": {
-    "watch": "sass --watch ./src/main.scss ./src/main.css"
+    "start": "webpack --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,7 @@
     "style-loader": "^3.2.1",
     "webpack": "^5.52.0",
     "webpack-cli": "^4.8.0",
-    "webpack-dev-server": "^4.1.0"
+    "webpack-dev-server": "^4.1.0",
+    "webpack-merge": "^5.8.0"
   }
 }

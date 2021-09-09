@@ -1,29 +1,5 @@
-@use "./variables";
-
-// SMOOTH RESET
-*,
-*::after,
-*::before { 
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  font-size: 62.5%;
-}
-
-h1, h2, h3, h4, h5 {
-  font-size: inherit;
-}
-
-input {
-  outline: none;
-}
-
-button {
-  cursor: pointer;
-}
+@use "./reset";
+@use "./variables" as *;
 
 // LAYOUT
 body {
@@ -31,18 +7,18 @@ body {
 }
 
 .container {
-  padding: variables.$p-md;
+  padding: $p-md;
   max-width: 576px;
   margin: 0 auto;
   @media screen and (min-width: 480px) {
-    padding: variables.$p-2xl 2rem;
+    padding: $p-2xl 2rem;
   }
 }
 
 header {
-  margin-bottom: variables.$m-xxl;
+  margin-bottom: $m-xxl;
   @media screen and (min-width: 480px) {
-    margin-bottom: variables.$m-2xl;
+    margin-bottom: $m-2xl;
   }
   a, img {
     display: block;
@@ -54,22 +30,22 @@ header {
 main {
   text-align: center;
   h1 {
-    color: variables.$secondary-color;
-    font-size: variables.$f-sm;
+    color: $secondary-color;
+    font-size: $f-sm;
     font-style: italic;
-    margin-bottom: variables.$m-sm;
+    margin-bottom: $m-sm;
     @media screen and (min-width: 480px) {
-      font-size: variables.$f-md;
-      margin-bottom: variables.$m-lg;
+      font-size: $f-md;
+      margin-bottom: $m-lg;
     }
   }
 }
 
 .search-form {
-  margin:0 auto variables.$m-xxl;
+  margin:0 auto $m-xxl;
   max-width: 480px;
   label {
-    border: 3px solid variables.$primary-color;
+    border: 3px solid $primary-color;
     border-radius: 200px;
     display: flex;
     justify-content: space-between;
@@ -82,10 +58,10 @@ main {
     }
     input {
       padding: .6rem 0 .6rem 1.6rem;
-      font-size: variables.$f-sm;
+      font-size: $f-sm;
       width: Calc(100% - 3rem);
       &::placeholder {
-        color: variables.$grey-color;
+        color: $grey-color;
         font-style: italic;
       }
     }
@@ -100,7 +76,7 @@ main {
 
 .wrapper {
   position: relative;
-  font-size: variables.$f-sm;
+  font-size: $f-sm;
   @media screen and (min-width: 480px) {
     display: flex;
     flex-wrap: wrap;
@@ -109,7 +85,7 @@ main {
 }
 
 .data {
-  margin: variables.$m-xl 0;
+  margin: $m-xl 0;
   @media screen and (min-width: 480px) {
     width: Calc(50% - 4rem);
   }
@@ -117,14 +93,14 @@ main {
     text-align: center;
   }
   h2 {
-    color: variables.$secondary-color;
-    font-size: variables.$f-md;
+    color: $secondary-color;
+    font-size: $f-md;
     font-weight: normal;
-    margin-bottom: variables.$m-xs;
+    margin-bottom: $m-xs;
   }
   p {
-    color: variables.$ternary-color;
-    font-size: variables.$f-xxs;
+    color: $ternary-color;
+    font-size: $f-xxs;
     font-style: oblique;
   }
 }
@@ -136,7 +112,7 @@ main {
   left: 0;
   right: 0;
   background: white;
-  color: variables.$error-color;
+  color: $error-color;
   p {
     line-height: 1.6;
   }
