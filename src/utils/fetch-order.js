@@ -1,8 +1,8 @@
-import json from '../data/data.json';
+const URL = './data/data.json';
 
 // Requisita o pedido para base de dados
 async function fetchOrder(orderCode) {
-  const response = await fetch(json);
+  const response = await fetch(URL);
   const data = await response.json();
 
   const {encomendas} = data;
