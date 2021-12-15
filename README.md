@@ -1,4 +1,6 @@
-# Nitro Marketing Digital - Desafio para vaga de Desenvolvedor Front-end 
+# Nitro Marketing Digital - Desafio para vaga de Desenvolvedor Front-end
+
+![badge done](https://img.shields.io/badge/status-done-success)
 
 1. Instale as dependências através do comando:
 `npm install`
